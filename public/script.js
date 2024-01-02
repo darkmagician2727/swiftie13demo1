@@ -2,14 +2,13 @@ const songRankingsKey = 'songRankings';
 const userProgressKey = 'userProgress';
 const dbUrl = 'db.json';
 
-let overallLoops = 2
+let overallLoops = 2;
 let loopCounter = 1;
 let innerLoopCounter = 1;
 let totalRounds;
 let songs; // Array to store songs fetched from the database
 
 
-// Fetch songs from the database
 // Fetch songs from the database and sort them by score in descending order
 async function fetchSongs() {
     try {
@@ -63,8 +62,6 @@ async function startRanking() {
 
     displaySongSet();
 }
-
-
 
 function displaySongSet() {
     songs.sort((a, b) => {
